@@ -1,0 +1,128 @@
+// Navigation code here
+
+.intro {
+    .display-center();
+    flex-direction: column;
+    padding-top: 10px;
+
+
+    .nav-bar {
+        padding: 10px 0 10px 0;
+        font-size: 1.8rem;
+        margin: 0 10% 0 0;
+        display: flex;
+        flex-direction: row;
+
+        @media @phone {
+            font-size: 1.2rem;
+            margin: 0 0 0 0;
+            .display-center();
+            flex-direction: column;
+        }
+
+        .header-image {
+            width: 25%;
+
+            @media @phone {
+                width: 100%;
+                padding: 0 15% 10px 15%;
+                .display-center();
+            }
+            
+            img {
+                max-width:100%;
+                height:auto;
+            }
+
+
+        }
+
+        nav {
+            .display-evenly();
+            margin-right: 20px;
+
+            @media @phone {
+                justify-content: space-between;
+                margin-right: 0;
+            }
+
+            .header-a {
+                .display-center();
+                align-items: center;
+                padding: 0 10px 0 10px;
+                border-right: 1px solid gray;
+
+                @media @phone {
+                    border: none;
+                }
+            }
+
+
+            a {
+                .display-center();
+                text-decoration: none;
+                color: #8AA192;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .hero-image {
+
+        position: relative;
+
+
+        img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            
+            @media @phone {
+                height: 100px;
+                object-fit: cover;
+            }
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            .display-center();
+            text-align: center;
+            flex-direction: column;
+
+            h1 {
+                color: #772D1E;
+                font-size: 2.2rem;
+            }
+            
+            p {
+                color: @abbey;
+                font-size: 1.5rem;
+
+                @media @phone {
+                    display: none;
+                }
+            }
+
+            .hero-button {
+                .display-center();
+                margin-top: 10px;
+
+                @media @phone {
+                    margin-top: 0;
+                }
+                
+                
+                h3 {
+                    font-size: 1.5rem;
+                    color: @metallic-copper;
+                    background-color: white;
+                    padding: 5px 5px 5px 5px;
+                }
+
+            }
+        }
+    }
+}
